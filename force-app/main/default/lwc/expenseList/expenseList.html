@@ -1,0 +1,19 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Expenses List View">
+        <div slot="actions">
+            <lightning-button label="New Expense" onclick={navigateNewExpense}>
+            </lightning-button>
+            <lightning-button variant="destructive-text" label="Delete Selected" onclick={deleteSelectedExpenses}></lightning-button>
+        </div>
+        <div class="slds-card__body_inner">
+            <lightning-datatable 
+            key-field="Id"
+            data={expenses}
+            columns={columns}
+            onrowselection={handleRowSelection}
+            >  
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
